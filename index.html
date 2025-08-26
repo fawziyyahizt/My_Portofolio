@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Fawziyyah Izzati Azima</title>
+    <style>
+        :root {
+            --primary-color: #8A2BE2;
+            --accent-color: #FF69B4;
+            --text-color: #ffffff;
+            --card-bg: rgba(25, 25, 25, 0.15);
+            --card-border: rgba(255, 255, 255, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            background-color: #0a0a1a;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding: 20px;
+            perspective: 1000px; /* Untuk efek 3D */
+        }
+
+        .landing-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            color: var(--text-color);
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out;
+            transition: transform 0.1s ease-out; /* Untuk efek parallax mouse */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .slogan {
+            font-size: 1.1rem;
+            color: var(--text-muted-color);
+            margin-bottom: 30px;
+        }
+        
+        .slogan span {
+            display: block;
+            margin-top: 5px;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .link-button {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .link-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.03);
+        }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+            }
+            .landing-card {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="card-container">
+        <div class="landing-card">
+            <img src="kak zk zi.jpg" alt="Foto Profil" class="profile-picture">
+
+            <h1>Fawziyyah Izzati Azima</h1>
+            <p class="slogan">
+                Graphic Designer
+                <span>“Visual Kreatif, Solusi Efektif”</span>
+            </p>
+
+            <div class="links-container">
+                <a href="https://portofolio-steel-rho.vercel.app/" class="link-button">Portofolio Saya</a>
+
+                <a href="https://www.instagram.com/fawziyyahizt_?igsh=bHpzbTNocThpeTVz" class="link-button" target="_blank">Instagram</a>
+
+                <a href="https://wa.me/6282171815956?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." class="link-button" target="_blank">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": "#ffffff", "opacity": 0.2, "width": 1 },
+                "move": { "enable": true, "speed": 2, "direction": "none", "random": true, "straight": false, "out_mode": "out", "bounce": false }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+                "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }, "push": { "particles_nb": 4 } }
+            },
+            "retina_detect": true
+        });
+
+        // Script untuk efek parallax mouse pada kartu
+        const card = document.querySelector('.landing-card');
+        const container = document.querySelector('.card-container');
+
+        container.addEventListener('mousemove', (e) => {
+            let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+            let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+            card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+        });
+
+        // Reset efek saat mouse keluar
+        container.addEventListener('mouseleave', (e) => {
+            card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        });
+    </script>
+</body>
+</html>
